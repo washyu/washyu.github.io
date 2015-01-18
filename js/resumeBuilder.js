@@ -1,13 +1,13 @@
 var bio = {
     "name": "Shaun Jackson",
-    "role": "Web Developer",
+    "role": "Programmer, Web Developer",
     "contacts": {
         "mobile": "(253) 219-7502",
         "email": "washyu@hotmail.com",
         "github": "https://github.com/washyu",
         "location": "Puyallup, WA, US"
     },
-    "biopic": "images/me.jpg",
+    "biopic": "images/me-smaller.jpg",
     "skills": [
         "C#",
         "Javascript",
@@ -59,28 +59,37 @@ var work = {
             "title": "Service Ops",
             "location": "Redmond, WA, US",
             "dates": "2009-2014",
-            "description": "Ran manual and automated tests against new builds to verify build quality. Worked with developers and testers to resolve any issues that arose during tests."
+            "description": "Ran manual and automated tests against new builds to verify build quality. Worked with developers and testers to resolve any issues that arose during tests. <br> \
+                            -  Created scripts to be executed before test content, to gather machine hardware specifications.<br> \
+                            -  Created automation tool to replace time-intensive manual scheduling, drastically cutting the time, from 2-3 hours to 20 minuetes, it took to schedule runs, as well as reducing scheduling errors.<br> \
+                            -  Worked with the tools team to incorporate auto scheduling in to main test scheduling tool."
         },
         {
             "employer": "Volt (Microsoft)",
             "title": "Software Test Engineer III",
             "location": "Redmond, WA, US",
             "dates": "2006-2009",
-            "description": "Ran the performance test framework against new builds of Hyper-V. Verified performance numbers across builds.  Worked with the developers and testers to resolve any issue that arose during the tests."
+            "description": "Ran the performance test framework against new builds of Hyper-V. Verified performance numbers across builds.  Worked with the developers and testers to resolve any issue that arose during the tests. <br> \
+                            -  Used C++ and batch scripts to automate the performance test harness that uploads tests results to a SQL database. <br> \
+                            -  Created website that displayed the test run performance numbers across builds allowing users to see performance data across builds using ASP.NET, AJAX and C#. <br> \
+                            -  Setup and maintained the SQL database that was used for the test runs results and the website."
         },
         {
             "employer": "Volt (Microsoft)",
             "title": "SDET I",
             "location": "Redmond, WA, US",
             "dates": "2004-2006",
-            "description": "Ran the testing framework against new builds to verify build quality.  Wrote test plans and coded automation tests with in the automation framework. Worked with developers to verify the cause of test failures. In event failures were caused by specification changes, modified the test content. "
+            "description": "Ran the testing framework against new builds to verify build quality.  Wrote test plans and coded automation tests with in the automation framework. Worked with developers to verify the cause of test failures. In event failures were caused by specification changes, modified the test content. <br> \
+                            -  Designed a tools to help automation, including an application that talks to NETTICA web service (DNS host for test domains) and updates MX records. <br> \
+                            -  Wrote an application that took daily builds and pushed them to the test environment, signals another computer to run BVTs against the build, which generated email reports of test results."
         },
         {
             "employer": "Volt (Microsoft)",
             "title": "Software Test Engineer",
             "location": "Redmond, WA, US",
             "dates": "2004-2005",
-            "description": "Ensured that third-party devices and systems passed all of Microsoft’s requirements before they received a “Build for Windows” logo."
+            "description": "Ensured that third-party devices and systems passed all of Microsoft’s requirements before they received a “Build for Windows” logo. <br> \
+                            -  Used C# to write a tool that would automatically verify submitted logs to speed up the process."
         }
     ]
 }
@@ -145,12 +154,14 @@ education.display = function(){
 var projects = {
     "projects": [
         {
-            "title": "the test",
-            "dates": "2015",
-            "description": "test",
+            "title": "An Arduino based joystick control board.",
+            "dates": "2014",
+            "description": "Wanted to create an Arduino powered, usb joystick for my MAME arcade to replace the Ultimarc keyboard emulator I was using.",
+            "url" : "https://github.com/washyu/Arduino-Projects/tree/master/DualMameController",
             "images": [
-                "images/197x148.gif",
-                "images/197x148.gif"
+                "images/DualMame/fullboard.png",
+                "images/DualMame/Top.png",
+                "images/DualMame/bottom.png"
             ]
         }
     ]
@@ -160,7 +171,7 @@ var projects = {
 projects.display = function() {
     this.projects.forEach(function(project){
         $("#projects").append(HTMLprojectStart)
-        $(".project-entry:last").append(HTMLprojectTitle.replace("%data%", project.title));
+        $(".project-entry:last").append(HTMLprojectTitle.replace("%data%", project.title).replace("#", project.url)); // jsut doing a second replace on the string returned by the first replace.
         $(".project-entry:last").append(HTMLprojectDates.replace("%data%", project.dates));
         $(".project-entry:last").append(HTMLprojectDescription.replace("%data%", project.description));
 

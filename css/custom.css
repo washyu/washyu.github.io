@@ -1,0 +1,86 @@
+.purple-text {
+	color: #615192;
+	font-weight: bold;
+}
+
+.role {
+	color: #7887AB;
+	font-size: 1.2em;
+  	font-weight: bold;
+  	float: right;
+  	margin-top: 15px;
+}
+
+.light-blue {
+	background-color: #7887AB;
+}
+
+.purple {
+	background-color: #887CAF;
+}
+
+.project-image {
+	max-width: 200px;
+}
+
+.welcome-message {
+	color: rgba(0,0,0,0.5);
+	font-size: 16px;
+}
+
+.date-text {
+	color: #261758;
+}
+
+.location-text {
+	color: #261758;
+}
+
+.biopic {
+	border-radius: 25%;
+}
+
+#main {
+  	max-width:1200px;
+  	margin: 0 auto;
+  	-webkit-box-shadow: 0px 0px 71px 6px rgba(0,0,0,0.55);
+	-moz-box-shadow: 0px 0px 71px 6px rgba(0,0,0,0.55);
+	box-shadow: 0px 0px 71px 6px rgba(0,0,0,0.55);
+}
+
+#header {
+	background-color: #2E4172
+}
+
+#topContacts {
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+#footerContacts{
+	background-color: #887CAF;
+}
+
+#skillsH3 {
+  color: #7887AB;
+}
+
+h1 {
+	color: rgba(0,0,0,0.5);
+	font-weight: bold;
+	font-size: 42px;
+}
+
+h2 {
+	color: #003430;
+}
+
+p {
+	color: rgba(0,0,0,0.5);
+}
+
+a {
+	color: #403075;
+}
+ 
+
